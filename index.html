@@ -1,71 +1,123 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Cart System</title>
+    <link href="./src/output.css" rel="stylesheet" />
   </head>
-  <body>
-    
-    <p class="font-bold text-base m-10 text-center">
-      Simple Shopping Cart
-    </p> 
+  <body class="bg-orange-50 font-sans">
+    <p class="font-bold text-2xl mt-8 text-center text-orange-700">
+      Frozen Goods Cart
+    </p>
 
-    <div class="grid grid-cols-2 mx-10 gap-30">
+    <div
+      class="grid md:grid-cols-2 grid-cols-1 mx-auto max-w-5xl mt-8 gap-6 p-4"
+    >
+      <!-- Products Section -->
+      <div
+        class="bg-orange-200 p-6 rounded-2xl shadow-md w-full max-w-[600px] mx-auto"
+      >
+        <p
+          class="font-bold text-xl text-center text-white bg-orange-600 rounded-lg py-2"
+        >
+          Products
+        </p>
 
-        <!--Container 1-->
-        <div class="bg-orange-300 text-white text-base p-6 rounded-lg ">
-            <p class="font-bold text-center ">
-                Products
-            </p> 
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+          <!-- Product Cards -->
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Tocino"
+            data-price="180"
+          >
+            <p class="font-bold text-lg">Tocino</p>
+            <p class="text-sm">Sweet and tender</p>
+            <p class="text-sm font-semibold">₱180</p>
+          </div>
 
-            <div class = "grid grid-cols-4 gap-5 mt-5 ">
-                <div class = "bg-orange-500 p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold text-lg">Chicken</p>
-                    <p class = "text-sm">Fresh from the farm</p>
-                    <p class = "text-sm font-bold">240</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Pork</p>
-                    <p class = "text-sm">Fresh from slaughter house</p>
-                    <p class = "text-smfont-bold">480</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Beef</p>
-                    <p class = "text-sm">Tender and High-quality</p>
-                    <p class = "text-sm font-bold">540</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Fish</p>
-                    <p class = "text-sm">Fresh Seafood</p>
-                    <p class = "text-sm font-bold">180</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Shrimp</p>
-                    <p class = "text-sm">Fresh Seafood</p>
-                    <p class = "text-sm font-bold">250</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Sea shells</p>
-                    <p class = "text-sm">Fresh Seafood</p>
-                    <p class = "text-sm font-bold">200</p>
-                </div>
-                <div class = "bg-orange-500 text-lg p-2 rounded-lg hover:bg-orange-600 cursor-pointer">
-                    <p class = "font-bold">Squid</p>
-                    <p class = "text-sm">Fresh Seafood</p>
-                    <p class = "text-sm ">280</p>
-                </div>
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Hotdog"
+            data-price="120"
+          >
+            <p class="font-bold text-lg">Hotdog</p>
+            <p class="text-sm">Classic red & juicy</p>
+            <p class="text-sm font-semibold">₱120</p>
+          </div>
 
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Skinless"
+            data-price="150"
+          >
+            <p class="font-bold text-lg">Skinless</p>
+            <p class="text-sm">Soft and flavorful</p>
+            <p class="text-sm font-semibold">₱150</p>
+          </div>
 
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Longganisa"
+            data-price="160"
+          >
+            <p class="font-bold text-lg">Longganisa</p>
+            <p class="text-sm">Home-style garlic taste</p>
+            <p class="text-sm font-semibold">₱160</p>
+          </div>
 
-            </div>
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Footlong"
+            data-price="140"
+          >
+            <p class="font-bold text-lg">Footlong</p>
+            <p class="text-sm">Perfect for snacks</p>
+            <p class="text-sm font-semibold">₱140</p>
+          </div>
+
+          <div
+            class="product bg-orange-500 p-4 rounded-xl hover:bg-orange-600 cursor-pointer text-white transition-all"
+            data-name="Embutido"
+            data-price="200"
+          >
+            <p class="font-bold text-lg">Embutido</p>
+            <p class="text-sm">Savory and rich flavor</p>
+            <p class="text-sm font-semibold">₱200</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Section -->
+      <div
+        class="bg-green-200 rounded-2xl p-6 flex flex-col shadow-md w-full max-w-[400px] mx-auto h-[500px]"
+      >
+        <p
+          class="font-bold text-xl text-center text-white bg-green-600 rounded-lg py-2 sticky top-0 z-10"
+        >
+          Cart Details
+        </p>
+
+        <!-- Scrollable cart list -->
+        <div
+          id="cartInfo"
+          class="mt-4 text-gray-700 overflow-y-auto flex-1 pr-2 scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-100"
+        >
+          <p class="text-center text-gray-600">
+            Click a product to add it to the cart.
+          </p>
         </div>
 
-        <div class="bg-green-300 py-50 p-10">
-            <p></p>
+        <div
+          id="totalDisplay"
+          class="mt-4 text-center hidden border-t border-green-400 pt-3 sticky bottom-0 bg-green-200"
+        >
+          <p class="font-bold text-xl text-gray-800">
+            Total: ₱<span id="totalAmount">0.00</span>
+          </p>
         </div>
+      </div>
     </div>
-
   </body>
-  <script src = 'script.js'></script>
+  <script src = "script.js"></script>
 </html>
